@@ -2,6 +2,8 @@
 def weight_average(my_list=[]):
     weighted_sum = 0
     weighted_len = 0
+    if not my_list:
+        return 0
     for tup in my_list:
         tup_product = 1
         for el in tup:
