@@ -15,21 +15,16 @@ def roman_to_int(roman_string):
             "I": 1
             }
 
-    if type(roman_string) == str:
+    if type(roman_string) == str and roman_string:
         num_arr = []
-
         for ch in roman_string:
             if ch in roman_char:
                 num_arr.append(roman_char[ch])
-        if len(num_arr) == 1:
-            return num_arr[0]
-        else:
-            num = num_arr[0]
-            for i in range(1, len(num_arr)):
-                if num_arr[i] > num_arr[i - 1]:
-                    num -= num_arr[i]
-                else:
-                    num += num_arr[i]
-        return abs(num)
+
+        for i in range(len(num_arr)):
+            if i != len(num_arr) - 1:
+                if num_arr[i] < num_arr[i + 1]:
+                    num_arr[i] = -num_arr[i]
+        return sum(num_arr)
     else:
         return 0
