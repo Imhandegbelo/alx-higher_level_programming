@@ -31,7 +31,5 @@ def roman_to_int(roman_string):
                 else:
                     num += num_arr[i]
         return abs(num)
-    elif roman_string == None:
-        return 0
     else:
         return 0
