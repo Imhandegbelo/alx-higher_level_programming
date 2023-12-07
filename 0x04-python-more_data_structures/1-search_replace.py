@@ -2,7 +2,7 @@
 '''
 function that replaces all occurences of an element by another in a new list
 @my_list: the list
-@search: the element to search for 
+@search: the element to search for
 @replace: the new element
 '''
 

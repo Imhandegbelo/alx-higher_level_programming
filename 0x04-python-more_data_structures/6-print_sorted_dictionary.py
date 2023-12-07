@@ -5,5 +5,5 @@ function that prints a dictinary by ordered keys
 
 
 def print_sorted_dictionary(a_dictionary):
-    sorted_dict = dict(sorted(a_dictionary.items()))
-    print(sorted_dict)
+    for item in sorted(a_dictionary):
+        print("{:s}: {}".format(item, a_dictionary[item]))
