@@ -69,3 +69,22 @@ class Rectangle(Base):
     def area(self):
         """Returns the rectangle area"""
         return self.__width * self.__height
+
+    def display(self):
+        """Prints in stdout the Rectangle instance with the character #"""
+        for emptyline in range(self.__y):
+            print('')
+        for newline in range(self.__height):
+            for space in range(self.__x):
+                print(' ', end='')
+            for symbol in range(self.__width):
+                print("#", end="")
+            print('')
+
+    def __str__(self):
+        """Overrides __str__ method to return [Rectangle] (<id>)
+           <x>/<y> - <width>/<height>
+        """
+        return "[Rectangle] " + "(" + str(self.id) + ") " + str(self.__x)\
+               + "/" + str(self.__y) + " - " + str(self.__width)\
+               + "/" + str(self.__height)
